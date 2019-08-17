@@ -1,4 +1,3 @@
-
 const _ = require('lodash');
 
 /* coinValues must be in descending order 
@@ -29,14 +28,8 @@ function coinGen(cents){
 
 let testCents = _.range(100);
 
-for (const i in testCents){
-    const cents = testCents[i];
+testCents.forEach(cents => {
     console.log("Cents:", cents);
     console.log("Change", coinGen(cents));
-}
+});
 
-
-// testCents.forEach(function(cents){
-//     console.log("Cents:", cents);
-//     console.log("Change", coinGen(cents));
-// });
